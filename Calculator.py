@@ -43,7 +43,17 @@ while start.upper() == "Y":
                 print("We cannot divide by zero. Please try again.")
                 second_operand=float(input("Please input a valid second operand:"))
         print(result)
-    #If division, asks the user if they want to see the whole number only or the remainder only
-    division_choices_list=["M", "NR"]
-    division_choices=input("To know the remainder of your equation, type M. If you want to know the result without any remainder, type NR.")
-    if division_choices
+        #If division, asks the user if they want to see the whole number only or the remainder only
+        division_choices_list=["M", "NR"]
+        while True:
+            division_choices=input("To know the remainder of your equation, type M. If you want to know the result without any remainder, type NR.")
+            if division_choices in division_choices_list:
+                break
+            else:
+                print("Invalid answer! Please try again.")
+        if "M" in division_choices:
+            result=first_operand%second_operand
+            print(result)
+        if "NR" in division_choices:
+            result=first_operand//second_operand
+            print(result)
