@@ -47,6 +47,7 @@ while start.upper() == "Y":
         division_choices_list=["M", "NR"]
         while True:
             division_choices=input("To know the remainder of your equation, type M. If you want to know the result without any remainder, type NR.")
+            division_choices=division_choices.upper()
             if division_choices in division_choices_list:
                 break
             else:
@@ -57,3 +58,5 @@ while start.upper() == "Y":
         if "NR" in division_choices:
             result=first_operand//second_operand
             print(result)
+    #Asks if user wants to perform another operation
+    start=input("Would you like to perform more calculations?Y/N")
