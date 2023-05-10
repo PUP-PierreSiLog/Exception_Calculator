@@ -35,6 +35,12 @@ while start.upper() == "Y":
         result=first_operand-second_operand
         print(result)
     if "D" in operation:
-        result=first_operand/second_operand
+        while True:
+            try:
+                result=first_operand/second_operand
+                break
+            except ZeroDivisionError:
+                print("We cannot divide by zero. Please try again.")
+                second_operand=float(input("Please input a valid second operand:"))
         print(result)
     #If division, asks the user if they want to see the whole number only or the remainder only
