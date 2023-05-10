@@ -44,3 +44,6 @@ while start.upper() == "Y":
                 second_operand=float(input("Please input a valid second operand:"))
         print(result)
     #If division, asks the user if they want to see the whole number only or the remainder only
+    division_choices_list=["M", "NR"]
+    division_choices=input("To know the remainder of your equation, type M. If you want to know the result without any remainder, type NR.")
+    if division_choices
