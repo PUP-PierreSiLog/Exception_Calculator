@@ -1,4 +1,5 @@
 #Welcome Screen
+import sys
 #Asks the user to if ready to start (loop)
 start=input("Welcome to the calculator! Would you like to start now? Y/N")
 while start.upper() == "Y":
@@ -60,3 +61,5 @@ while start.upper() == "Y":
             print(result)
     #Asks if user wants to perform another operation
     start=input("Would you like to perform more calculations?Y/N")
+else:
+    sys.exit()
